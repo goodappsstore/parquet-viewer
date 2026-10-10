@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+dist/
+
+# Rust / Tauri
+src-tauri/target/
+src-tauri/gen/
+# Prebuilt DuckDB static archives (fetched by scripts/fetch-duckdb.mjs)
+src-tauri/libs/
+# Generated DuckDB static-link env (written by scripts/fetch-duckdb.mjs)
+.cargo/config.toml
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,20 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-capability",
+  "description": "Main window capabilities for ParquetPeek",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    {
+      "identifier": "opener:allow-open-path",
+      "allow": [{ "path": "**" }]
+    },
+    "opener:allow-reveal-item-in-dir",
+    "dialog:default",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "clipboard-manager:default",
+    "clipboard-manager:allow-write-text"
+  ]
+}

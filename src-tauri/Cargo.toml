@@ -1,0 +1,38 @@
+[package]
+name = "parquet-viewer"
+version = "0.1.0"
+description = "Beautiful desktop viewer for Apache Parquet files"
+authors = ["ParquetPeek"]
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "parquet_viewer_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-clipboard-manager = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+same-file = "1"
+# No `bundled` by default: local + CI builds link prebuilt DuckDB static
+# archives (see scripts/fetch-duckdb.mjs). The `json`/`parquet` features both
+# imply `bundled` (full C++ compile), so they must stay off here.
+duckdb = { version = "1", default-features = false }
+parquet = "55"
+arrow-array = "55"
+arrow-schema = "55"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "time"] }
+
+[features]
+default = []
+# Compile DuckDB from source instead of linking prebuilt static archives.
+# Required on Windows MSVC (official static-libs archives are MinGW-only);
+# also the fallback anywhere if the prebuilt archives fail to link.
+source-bundled = ["duckdb/bundled", "duckdb/json"]
