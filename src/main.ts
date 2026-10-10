@@ -542,6 +542,7 @@ function renderTitlebar(): string {
       <div class="titlebar-leading">
         <div class="brand-mark">${icon("table")}</div>
         <span class="titlebar-title">ParquetPeek</span>
+        <span class="titlebar-publisher">| GoodApps (hello@goodapps.store)</span>
         <span class="titlebar-sub">parquet viewer</span>
       </div>
       <div class="titlebar-trailing">
