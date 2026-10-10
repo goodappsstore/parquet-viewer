@@ -3251,7 +3251,7 @@ dependencies = [
 
 [[package]]
 name = "parquet-viewer"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "arrow-array 55.2.0",
  "arrow-schema 55.2.0",

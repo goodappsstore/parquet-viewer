@@ -1,6 +1,6 @@
 [package]
 name = "parquet-viewer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Beautiful desktop viewer for Apache Parquet files"
 authors = ["ParquetPeek"]
 edition = "2021"
