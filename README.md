@@ -2,6 +2,16 @@
 
 A fast, beautiful desktop viewer for **Apache Parquet** files built with **Rust**, **Tauri 2**, and TypeScript.
 
+## Screenshots
+
+### ParquetPeek with filters applied
+
+![ParquetPeek with filters applied](screenshots/with-filters.png)
+
+### ParquetPeek export options
+
+![ParquetPeek export options](screenshots/export.png)
+
 ## Highlights
 
 * 📂 **Open any `.parquet` / `.pq` file** via dialog, drag & drop, recent-files list, or tabs for multiple files side by side.
