@@ -118,6 +118,10 @@ All identifiers are validated against the live schema allow-list and all literal
 | `Enter` (in filter value) | Add filter |
 | `Esc` | Close modal / drawer |
 
+## AI Assistance
+
+Heavy AI assistance used. Not vibe-coded.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
